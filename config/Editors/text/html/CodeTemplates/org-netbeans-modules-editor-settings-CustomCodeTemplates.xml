@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="col" xml:space="preserve"><code><![CDATA[<div class="col">
+    ${cursor}
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="df" xml:space="preserve"><code><![CDATA[<div class="d-inline-flex">
+    ${cursor}
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="plata" xml:space="preserve"><code><![CDATA[B/.{{ number_format(${plata},2) }}]]></code></codetemplate>
+    <codetemplate abbreviation="sec" contexts="html-code" xml:space="preserve"><code><![CDATA[@section("${contenido}")
+${cursor}
+@endsection]]></code></codetemplate>
+    <codetemplate abbreviation="barra" xml:space="preserve"><code><![CDATA[<div class="container">
+    <div class="row bg-gris py-2 rounded">
+        <div class="col hstack gap-2">
+            <div class="d-inline-flex">
+                <div class="input-group">
+                    <span class="input-group-text icono fa-search"></span>
+                    <input type="text" class="form-control" name="name" placeholder="label" value="{{ old("name") ?? $name ?? '' }}">
+                </div>
+            </div>
+            <div class="d-inline-flex">
+                <button class="btn btn-secondary icono fa-search">Buscar</button>
+            </div>
+            <div class="d-inline-flex">
+                <a class="btn btn-secondary icono fa-arrow-left text-white" href="{{ route($rutas['index']) }}">Regresar</a>
+            </div>
+        </div>
+    </div>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="sw5" xml:space="preserve"><code><![CDATA[<div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" name="${cursor}${name}" id="${name}" @checked(old('active', $activo))>
+    <label class="form-check-label" for="${name}">${name}</label>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="button" xml:space="preserve"><code><![CDATA[<button class="btn btn-primary icono fa-search">${cursor}${Buscar}</button>]]></code></codetemplate>
+    <codetemplate abbreviation="tab" contexts="html-code" xml:space="preserve"><code><![CDATA[<table class="table table-hover table-striped">
+    <caption><h5></h5></caption>
+    <thead>
+    <tr>
+        <th>${Header}</th>
+        <th>${Header2}</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+                <tr>
+                    <td>Cell1</td>
+                    <td>Cell2</td>
+                </tr>
+                @forelse($datos as $k=>$v)
+                <tr>
+                    <td>{{ $v->id }}</td>
+                    <td>{{ $v->campo }}</td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="20"></td>
+                </tr>
+                @endforelse
+            </tbody>
+</table>]]></code></codetemplate>
+    <codetemplate abbreviation="ig5" xml:space="preserve"><code><![CDATA[<div class="input-group mb-3">
+    <span class="input-group-text icono fa-search"></span>
+    <div class="form-floating flex-grow-1">
+        <input type="text" class="form-control" name="${name}"${cursor} value="{{ old("${name}") ?? $$${name} ?? '' }}">
+        <label>${label}</label>
+    </div>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="ul" contexts="html-code" xml:space="preserve"><code><![CDATA[<ul class='list-group'>
+    <li class='list-group-item'>${first}</li>
+    <li class='list-group-item'>${second}</li>
+    <li class='list-group-item'>${third}</li>${cursor}
+</ul>]]></code></codetemplate>
+    <codetemplate abbreviation="lan" xml:space="preserve"><code><![CDATA[@lang("${cursor}")]]></code></codetemplate>
+    <codetemplate abbreviation="sel" contexts="html-code" xml:space="preserve"><code><![CDATA[<select name="${name}${cursor}" class="form-select" default="{{ $$${dato}->${name} }}">
+    @foreach($$${name}s as $k=>$v)
+    <option value="{{ $k }}" @selected($$${dato}->${name}==$k) >{{ $v }}</option>
+    @endforeach
+</select>]]></code></codetemplate>
+    <codetemplate abbreviation="row" xml:space="preserve"><code><![CDATA[<div class="row">
+    <div class="col">
+        ${cursor}
+    </div>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="cont" xml:space="preserve"><code><![CDATA[<div class="container">
+    <div class="row">
+        <div class="col">
+            ${cursor}
+        </div>
+    </div>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="ig" xml:space="preserve"><code><![CDATA[<label>${label}</label>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text icono fa-search"></span>
+    </div>
+    <input type="text" class="form-control" name="${name}" placeholder="${label}" value="{{ old("${name}") ?? $$${name} ?? '' }}">
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="jav" xml:space="preserve"><code><![CDATA[<script type="text/javascript">
+$(document).ready(function(){
+    ${cursor}
+});    
+</script>]]></code></codetemplate>
+    <codetemplate abbreviation="a" contexts="html-code" xml:space="preserve"><code><![CDATA[<a href="${url}" class="">${cursor}</a>]]></code></codetemplate>
+    <codetemplate abbreviation="op" contexts="html-code" xml:space="preserve"><code><![CDATA[<option value="${value}">${text}</option>]]></code></codetemplate>
+    <codetemplate abbreviation="ab" xml:space="preserve"><code><![CDATA[<a class="btn btn-secondary icono fa-arrow-left text-white" href="{{ route($rutas['index']) }}">Regresar</a>
+]]></code></codetemplate>
+    <codetemplate abbreviation="d" contexts="html-code" xml:space="preserve"><code><![CDATA[<div class="${cursor}"></div>]]></code></codetemplate>
+    <codetemplate abbreviation="in" contexts="html-code" xml:space="preserve"><code><![CDATA[<input type="${type}" name="${name}"${cursor} class="form-control">]]></code></codetemplate>
+    <codetemplate abbreviation="in:text" contexts="html-code" xml:space="preserve"><code><![CDATA[<input type="text" class="form-control" name="${name}"${cursor}>]]></code></codetemplate>
+    <codetemplate abbreviation="in:number" contexts="html-code" xml:space="preserve"><code><![CDATA[<input type="number" name="${name}"${cursor} class="form-control">]]></code></codetemplate>
+    <codetemplate abbreviation="ta" contexts="html-code" xml:space="preserve"><code><![CDATA[<table>
+    <tr>
+        <td>${cursor}</td>
+    </tr>
+</table>]]></code></codetemplate>
+    <codetemplate abbreviation="ex" xml:space="preserve"><code><![CDATA[@extends('layouts.home')
+
+@section('contenido')
+${cursor}
+@endsection]]></code></codetemplate>
+    <codetemplate abbreviation="form" contexts="html-code" xml:space="preserve"><code><![CDATA[<form method="post" action="{{ route('xxx.yyy') }}">
+    @csrf
+    ${cursor}
+</form>]]></code></codetemplate>
+    <codetemplate abbreviation="in:file" contexts="html-code" xml:space="preserve"><code><![CDATA[<!-- esto va en el form enctype="multipart/form-data" -->
+<input type="file" name="${name}" accept="${image/png,image/jpeg}"${cursor}>
+<input type="file" name="archivo" accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'${cursor}>]]></code></codetemplate>
+    <codetemplate abbreviation="barra4" xml:space="preserve"><code><![CDATA[<div class="container">
+    <div class="row bg-gris py-2 rounded">
+        <div class="col">
+            <div class="d-inline-flex pl-2">
+                <label>label</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text icono fa-search"></span>
+                    </div>
+                    <input type="text" class="form-control" name="name" placeholder="label" value="{{ old("name") ?? $name ?? '' }}">
+                </div>
+            </div>
+            <button class="btn btn-secondary icono fa-search">Buscar</button>
+        </div>
+    </div>
+</div>]]></code></codetemplate>
+    <codetemplate abbreviation="li" contexts="html-code" xml:space="preserve"><code><![CDATA[<li class="list-group-item">${item}</li>${cursor}]]></code></codetemplate>
+    <codetemplate abbreviation="tr" contexts="html-code" xml:space="preserve"><code><![CDATA[<tr>
+    <td class='fw-bold'>${cursor}</td>
+    <td>{{  }}</td>
+</tr>]]></code></codetemplate>
+    <codetemplate abbreviation="card" xml:space="preserve"><code><![CDATA[<div class="card">
+    <h5 class="card-header">${cursor}</h5>
+    <div class="card-body">
+        ${cursor}
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-secondary icono fa-ban">Cancelar</a>
+        <button class="btn btn-primary icono fa-save">Guardar</button>
+    </div>
+</div>]]></code></codetemplate>
+</codetemplates>

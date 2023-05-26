@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="acc" xml:space="preserve"><code><![CDATA[//use Illuminate\Database\Eloquent\Casts\Attribute;
+
+protected function ${funcion}():Attribute{
+return Attribute::make(
+get:fn(string $value)=>${valor},
+);
+}]]></code></codetemplate>
+    <codetemplate abbreviation="swi" contexts="php-code" uuid="org.netbeans.modules.php.editor.codetemplate.switch" xml:space="preserve"><code><![CDATA[switch (${VARIABLE variableFromPreviousAssignment default="$var"}) {
+    case ${$value}:
+        ${selection}${cursor}
+        break;
+
+    default:
+        break;
+}]]></code></codetemplate>
+    <codetemplate abbreviation="rv" xml:space="preserve"><code><![CDATA[$$${variable} = ${modelo}::get();
+
+return view($this->rutas['${ruta}${cursor}'],[
+    'titulo' => '${titulo}',
+    '${variable}${cursor}' => $$${variable},
+    'rutas'=>$this->rutas,
+]);]]></code></codetemplate>
+    <codetemplate abbreviation="keyt" xml:space="preserve"><code><![CDATA['${variable}${cursor}' => $this->${variable},]]></code></codetemplate>
+    <codetemplate abbreviation="iss" xml:space="preserve"><code><![CDATA[if(isset($$${var})){
+    ${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="keyy" xml:space="preserve"><code><![CDATA['${llave}' => '${llave}',]]></code></codetemplate>
+    <codetemplate abbreviation="tstr" xml:space="preserve"><code><![CDATA[$table->string('${campo}',50)->nullable(false);]]></code></codetemplate>
+    <codetemplate abbreviation="afun" xml:space="preserve"><code><![CDATA[function() {
+    ${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="model" xml:space="preserve"><code><![CDATA[protected $table = "${cursor}";
+// protected $primaryKey = "";
+// protected $keyType = "string";
+protected $fillable = [];
+protected $casts = [];
+//protected $boolFilteredFields = [];
+
+// public $timestamps = false;
+// public $incrementing = false;
+]]></code></codetemplate>
+    <codetemplate abbreviation="nam" xml:space="preserve"><code><![CDATA[->name('${variable}${cursor}')]]></code></codetemplate>
+    <codetemplate abbreviation="key" xml:space="preserve"><code><![CDATA['${variable}${cursor}' => $$${variable},]]></code></codetemplate>
+    <codetemplate abbreviation="cons" xml:space="preserve"><code><![CDATA[const BASE = "ver.parl";
+
+public function __construct(public array $rutas = []) {
+        $otros = [];
+        $explicit = [];
+        $resource = true;
+$this->rutas = parent::dameRutas(rutaBase: self::BASE, otros: $otros, explicit: $explicit, resource: $resource);
+}]]></code></codetemplate>
+    <codetemplate abbreviation="vali" xml:space="preserve"><code><![CDATA[$validated = $request->validated();
+    dd($validated)${cursor};
+]]></code></codetemplate>
+    <codetemplate abbreviation="tryq" xml:space="preserve"><code><![CDATA[try {
+DB::statement($sql);
+Session::flash("mensaje", "Exito.");
+Session::flash("alert-class", "alert-success");
+} catch (\Illuminate\Database\QueryException $ex) {
+dd($ex->getMessage());
+}]]></code></codetemplate>
+    <codetemplate abbreviation="arr" xml:space="preserve"><code><![CDATA[$$${array}['${campo}']]]></code></codetemplate>
+    <codetemplate abbreviation="pvf" xml:space="preserve"><code><![CDATA[private function ${functionName}($$${param}) {
+    ${selection}${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="hasm" xml:space="preserve"><code><![CDATA[//use Illuminate\Database\Eloquent\Relations\HasMany;
+public function ${funcion}s():HasMany {
+        return $this->hasMany(${funcion}s::class,'id_${funcion}');
+    }]]></code></codetemplate>
+    <codetemplate abbreviation="prf" xml:space="preserve"><code><![CDATA[protected function ${functionName}($$${param}) {
+    ${selection}${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="belo" xml:space="preserve"><code><![CDATA[//use Illuminate\Database\Eloquent\Relations\BelongsTo;
+public function ${funcion}s():BelongsTo {
+        return $this->belongsTo(${funcion}s::class,'id_${funcion}');
+    }]]></code></codetemplate>
+    <codetemplate abbreviation="fill" xml:space="preserve"><code><![CDATA[protected $fillable = [${cursor}];]]></code></codetemplate>
+    <codetemplate abbreviation="prs" xml:space="preserve"><code><![CDATA[private string $$${var} = '${tabla}';]]></code></codetemplate>
+    <codetemplate abbreviation="casts" xml:space="preserve"><code><![CDATA[protected $casts = [${cursor}];]]></code></codetemplate>
+    <codetemplate abbreviation="thi" xml:space="preserve"><code><![CDATA[$this->${cursor}]]></code></codetemplate>
+    <codetemplate abbreviation="pe" xml:space="preserve"><code><![CDATA[echo "<pre>".print_r(${array}${cursor})."</pre>";exit;]]></code></codetemplate>
+    <codetemplate abbreviation="ttt" xml:space="preserve"><code><![CDATA[$table->${tipo}('${campo}')->nullable(false);]]></code></codetemplate>
+    <codetemplate abbreviation="pf" xml:space="preserve"><code><![CDATA[public function ${functionName}($$${param}) {
+    ${selection}${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="uniq" xml:space="preserve"><code><![CDATA[->unique()]]></code></codetemplate>
+    <codetemplate abbreviation="nf" xml:space="preserve"><code><![CDATA[->nullable(false);]]></code></codetemplate>
+    <codetemplate abbreviation="tfk" xml:space="preserve"><code><![CDATA[$table->foreignId('${campoLocal}')->constrained('${tablaFK}')->nullable(false);]]></code></codetemplate>
+    <codetemplate abbreviation="tboo" xml:space="preserve"><code><![CDATA[$table->boolean('activo')->default(1)->nullable(false);]]></code></codetemplate>
+    <codetemplate abbreviation="zzz" xml:space="preserve"><code><![CDATA[${VARIABLE variableFromPreviousAssignment default="$variable"}]]></code></codetemplate>
+    <codetemplate abbreviation="tryc" contexts="php-code" uuid="org.netbeans.modules.php.editor.codetemplate.tryc" xml:space="preserve"><code><![CDATA[try {
+    // Model::create($validated);
+    // $model->update($validated);
+    ${selection}${cursor}
+    Session::flash('alert-class','alert-success');
+} catch (${QueryException} $$${ex}) {
+    $this->mensaje = $ex->getMessage();
+    Session::flash('alert-class','alert-danger');
+    Session::flash('nodismiss',true);
+}
+]]></code></codetemplate>
+    <codetemplate abbreviation="fun" xml:space="preserve"><code><![CDATA[function ${functionName} ($$${param}) {
+    ${cursor}
+}]]></code></codetemplate>
+    <codetemplate abbreviation="base" xml:space="preserve"><code><![CDATA[const BASE = "${base}${cursor}";
+
+public $rutas;
+
+public function __construct() {
+$this->rutas = parent::dameRutas(self::BASE);
+}]]></code></codetemplate>
+    <codetemplate abbreviation="pclon" remove="true"/>
+    <codetemplate abbreviation="pr" remove="true"/>
+    <codetemplate abbreviation="my_fo" remove="true"/>
+    <codetemplate abbreviation="pcon" remove="true"/>
+    <codetemplate abbreviation="my_fr" remove="true"/>
+    <codetemplate abbreviation="vdocl" remove="true"/>
+    <codetemplate abbreviation="fn" remove="true"/>
+    <codetemplate abbreviation="fnp" remove="true"/>
+    <codetemplate abbreviation="fnr" remove="true"/>
+    <codetemplate abbreviation="while" remove="true"/>
+    <codetemplate abbreviation="pvfnc" remove="true"/>
+    <codetemplate abbreviation="vdoc" remove="true"/>
+    <codetemplate abbreviation="my_fa" remove="true"/>
+    <codetemplate abbreviation="trt" remove="true"/>
+    <codetemplate abbreviation="ptfnc" remove="true"/>
+    <codetemplate abbreviation="my_gc" remove="true"/>
+    <codetemplate abbreviation="fnc" remove="true"/>
+    <codetemplate abbreviation="fnpr" remove="true"/>
+    <codetemplate abbreviation="pfnc" remove="true"/>
+</codetemplates>

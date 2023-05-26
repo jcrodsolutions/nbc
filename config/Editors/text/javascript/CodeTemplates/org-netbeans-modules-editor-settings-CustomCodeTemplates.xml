@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="ct" contexts="JavaScript-Code" xml:space="preserve"><code><![CDATA[console.table(${datos});]]></code></codetemplate>
+    <codetemplate abbreviation="data" xml:space="preserve"><code><![CDATA[let ${data} = $(this).data("${data}");]]></code></codetemplate>
+    <codetemplate abbreviation="jfun" xml:space="preserve"><code><![CDATA[$("${selector}",objFiltro).click(function(){
+    ${cursor}
+});
+]]></code></codetemplate>
+</codetemplates>
